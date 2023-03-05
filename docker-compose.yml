@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+    issuetrackerphp:
+        build:
+            dockerfile: ./Image/PHP/Dockerfile
+        container_name: issuetrackerphp
+        restart: unless-stopped
+        tty: true
+        working_dir: /var/www
+        volumes: 
+            - ./Apps:/var/www
+        networks: 
+            - istracker-network
+    issuetrackernginx:
+        image: nginx:1.19.8-alpine
+        container_name: issuetrackernginx
+        restart: unless-stopped
+        tty: true
+        ports: 
+            - 7458:80
+        volumes: 
+            - ./Apps:/var/www
+            - ./nginx/conf:/etc/nginx/conf.d
+        networks: 
+            - istracker-network
+networks:
+    istracker-network:
+        driver: bridge
