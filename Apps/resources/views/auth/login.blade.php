@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Laravel Apps</title>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ url('/adminlte/plugins/fontawesome-free/css/all.min.css') }}">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="{{ url('/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ url('/adminlte/dist/css/adminlte.min.css') }}">
+    <!-- Title Page-->
+    <title>Login YAYAY</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="{{ url('/cooladmin/css/font-face.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="{{ url('/cooladmin/vendor/bootstrap-4.1/bootstrap.min.css') }}" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{{ url('/cooladmin/vendor/animsition/animsition.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/wow/animate.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/css-hamburgers/hamburgers.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/slick/slick.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url('/cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.css') }}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ url('/cooladmin/css/theme.css') }}" rel="stylesheet" media="all">
+
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html">Apps</a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Please login to use apps.</p>
 
-      <form action="{{route('login.custom')}}" method="post">
-        @csrf
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Username" name = "email" id= "email" required autofocus>
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-user"></span>
+<body class="animsition">
+    <div class="page-wrapper">
+        <div class="page-content--bge5">
+            <div class="container">
+                <div class="login-wrap">
+                    <div class="login-content">
+                        <div class="login-logo">
+                            <a href="#">
+                                <img src="{{ url('/cooladmin/images/icon/logo.png') }}" alt="CoolAdmin">
+                            </a>
+                        </div>
+                        <div class="login-form">
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label>Employee ID</label>
+                                    <input class="au-input au-input--full" type="email" name="email" placeholder="employee id">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                </div>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" id = "password" name = "password" required>
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
-      <!-- /.social-auth-links -->
-      <p class="mb-1">
-        <!-- <a href="forgot-password.html">I forgot my password</a> -->
-      </p>
-      <p class="mb-0">
-        <a href="{{route('register-user')}}" class="text-center">Register</a>
-      </p>
+
     </div>
-    <!-- /.login-card-body -->
-  </div>
-</div>
-<!-- /.login-box -->
 
-<!-- jQuery -->
-<script src="{{ url('adminlte/plugins/jquery/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ url('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ url('dist/js/adminlte.min.js') }}"></script>
+    <!-- Jquery JS-->
+    <script src="{{ url('/cooladmin/vendor/jquery-3.2.1.min.js') }}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{{ url('/cooladmin/vendor/bootstrap-4.1/popper.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
+    <!-- Vendor JS       -->
+    <script src="{{ url('/cooladmin/vendor/slick/slick.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/wow/wow.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/animsition/animsition.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/counter-up/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/counter-up/jquery.counterup.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/circle-progress/circle-progress.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/chartjs/Chart.bundle.min.js') }}"></script>
+    <script src="{{ url('/cooladmin/vendor/select2/select2.min.js') }}"></script>
+
+    <!-- Main JS-->
+    <script src="{{ url('/cooladmin/js/main.js') }}"></script>
+
 </body>
+
 </html>
+<!-- end document-->
